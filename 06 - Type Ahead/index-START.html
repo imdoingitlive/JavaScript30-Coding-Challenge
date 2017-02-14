@@ -19,7 +19,9 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities = [];
 
-fetch(endpoint).then(blob => console.log(blob)); // fetch returns a promise
+fetch(endpoint)
+  .then(blob => blob.json())
+  .then(data => console.log(data)); // fetch returns a promise
 
 </script>
   </body>
